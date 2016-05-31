@@ -1,5 +1,6 @@
 package br.com.ayranandrade.desafioindwisesolucao.persistence;
 
+import br.com.ayranandrade.desafioindwisesolucao.model.ProductionDao;
 import br.com.ayranandrade.desafioindwisesolucao.model.Production;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
@@ -14,11 +15,11 @@ import java.util.stream.Collectors;
  *
  * @author Ayran
  */
-public class ProductionDaoImpl implements ProductionDao
+public class ProductionDaoFile implements ProductionDao
 {
 private final List<Production> production;
 
-    public ProductionDaoImpl(String path) throws IOException 
+    public ProductionDaoFile(String path) throws IOException 
     {
     ObjectMapper mapper = new ObjectMapper();
     production=mapper.readValue(new File(path),mapper.getTypeFactory()

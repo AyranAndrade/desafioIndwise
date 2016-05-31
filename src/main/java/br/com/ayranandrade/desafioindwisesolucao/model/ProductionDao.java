@@ -1,4 +1,4 @@
-package br.com.ayranandrade.desafioindwisesolucao.persistence;
+package br.com.ayranandrade.desafioindwisesolucao.model;
 
 import br.com.ayranandrade.desafioindwisesolucao.model.Production;
 import java.time.LocalDate;

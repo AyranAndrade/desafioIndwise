@@ -1,7 +1,7 @@
 package br.com.ayranandrade.desafioindwisesolucao.controller;
 
 import br.com.ayranandrade.desafioindwisesolucao.model.ResultProductionPerDay;
-import br.com.ayranandrade.desafioindwisesolucao.persistence.ProductionDao;
+import br.com.ayranandrade.desafioindwisesolucao.model.ProductionDao;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;

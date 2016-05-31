@@ -1,7 +1,7 @@
 package br.com.ayranandrade.desafioindwisesolucao.configuration;
 
-import br.com.ayranandrade.desafioindwisesolucao.persistence.ProductionDao;
-import br.com.ayranandrade.desafioindwisesolucao.persistence.ProductionDaoImpl;
+import br.com.ayranandrade.desafioindwisesolucao.model.ProductionDao;
+import br.com.ayranandrade.desafioindwisesolucao.persistence.ProductionDaoFile;
 import java.io.File;
 import java.io.IOException;
 import org.springframework.boot.SpringApplication;
@@ -20,7 +20,7 @@ public class DesafioIndwiseSolucaoApplication {
         @Bean
         public ProductionDao productionDao() throws IOException
         {
-        return new ProductionDaoImpl(System.getProperty("user.dir")
+        return new ProductionDaoFile(System.getProperty("user.dir")
                 +File.separator+"producao.json");
         }
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Graphics</title>
+        <meta charset="UTF-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+              crossorigin="anonymous"></link>        
+    </head>
+    <body>
+        <table id="table" class="highchart" data-graph-container-before="1"
+               data-graph-type="column">
+            <caption>How many products have been manufactured by day?</caption>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Units</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="result : ${results}">
+                    <td th:text="${result.date}">Date</td>
+                    <td th:text="${result.count}">Count</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" 
+    type="text/javascript"></script>
+    
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+    
+    <script src="http://code.highcharttable.org/2.0.0/jquery.highchartTable-min.js" 
+    type="text/javascript"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('table.highchart').highchartTable();
+            $('#table').hide();
+        });
+    </script>
+        
+    </body>
+</html>

@@ -73,7 +73,7 @@ public class HomeController
     Collections.sort(results,Collections.reverseOrder());
     
     model.addAttribute("results",results);
-    return "chart";
+    return "index";
     }
     
     @RequestMapping(value="/production",method=RequestMethod.GET)
@@ -90,7 +90,7 @@ public class HomeController
     Collections.sort(results,Collections.reverseOrder());
     
     model.addAttribute("results",results);
-    return "chart";
+    return "index";
     }    
     
     @RequestMapping(value="/",method = RequestMethod.GET)
@@ -104,5 +104,4 @@ public class HomeController
     {
     return "search";
     }
-    
 }

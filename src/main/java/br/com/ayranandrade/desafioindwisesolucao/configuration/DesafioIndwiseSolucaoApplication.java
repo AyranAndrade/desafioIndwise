@@ -21,6 +21,6 @@ public class DesafioIndwiseSolucaoApplication {
         public ProductionDao productionDao() throws IOException
         {
         return new ProductionDaoFile(System.getProperty("user.dir")
-                +File.separator+"producao.json");
+                +File.separator+"original"+File.separator+"producao.json");
         }
 }

@@ -62,6 +62,11 @@ public class HomeController
       model.addAttribute("error",true);
       return "search";
       }
+      
+      if(!start.isBefore(end))
+      {
+      return "search";
+      }
     
     dao.findProductionBetween(start,end).stream().collect(Collectors
                  .groupingBy(p->p.getProductionTime().toLocalDate()))

@@ -1,6 +1,5 @@
 package br.com.ayranandrade.desafioindwisesolucao.model;
 
-import br.com.ayranandrade.desafioindwisesolucao.model.Production;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;

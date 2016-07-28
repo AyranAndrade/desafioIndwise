@@ -1,17 +1,70 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" 
-      xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Search</title>
-        <meta charset="UTF-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+<html lang="en">
+  <head>
+      <meta charset="utf-8"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+    <title>Graphics</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
               integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-              crossorigin="anonymous"></link>
-    </head>
-    <body>
-        
-        <div th:if="${error}">
+              crossorigin="anonymous"></link> 
+    
+    <!-- Custom styles for this template -->
+    <link href="https://cdn.rawgit.com/AyranAndrade/desafioIndwise/master/src/main/resources/assets/css/style.css" rel="stylesheet"></link>
+    <link href="https://cdn.rawgit.com/AyranAndrade/desafioIndwise/master/src/main/resources/assets/css/style-responsive.css" rel="stylesheet"></link>
+  </head>
+
+  <body>
+
+  <section id="container" >
+      <!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+      <!--header start-->
+      <header class="header black-bg">
+            <!--logo start-->
+            <a href="index.html" class="logo"><b>Desafio Indwise</b></a>
+            <!--logo end-->
+        </header>
+      <!--header end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+              
+              	  <li class="mt">
+                      <a class="active" href="index.html">
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="/search">
+                          <span>Search</span>
+                      </a>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+
+              <div th:if="${error}">
             <div class="alert alert-danger">
                 <span class="close" data-dismiss="alert">&times;</span>
                 <strong>Error!</strong> Initial date or final date are wrong.
@@ -33,14 +86,28 @@
             </div>
             <input type="submit" value="Search" class="btn btn-primary"/>
         </form>
-        
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
-        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
-        crossorigin="anonymous"></script>
-        
-        <script>
-            $().alert('close');
-        </script>
-    </body>
+
+          </section>
+      </section>
+
+      <!--main content end-->
+  </section>
+      
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" 
+    type="text/javascript"></script>
+    
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    
+    <script src="http://code.highcharttable.org/2.0.0/jquery.highchartTable-min.js" 
+    type="text/javascript"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $('table.highchart').highchartTable();
+            $('#table').hide();
+        });
+    </script>
+
+  </body>
 </html>

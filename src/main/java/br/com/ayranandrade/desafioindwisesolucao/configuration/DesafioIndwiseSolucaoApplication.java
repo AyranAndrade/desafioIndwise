@@ -24,11 +24,11 @@ public class DesafioIndwiseSolucaoApplication {
         @Bean
         public ProductionDao productionDao() throws IOException
         {
-        String path=downloadProductionFile();
-        return new ProductionDaoFile(path);
-//        Código usado em desnevolvimento na minha máquina.
-//        return new ProductionDaoFile(System.getProperty("user.dir")
-//                +File.separator+"original"+File.separator+"producao.json");
+//        String path=downloadProductionFile();
+//        return new ProductionDaoFile(path);
+//        Código usado em desenvolvimento na minha máquina.
+        return new ProductionDaoFile(System.getProperty("user.dir")
+                +File.separator+"original"+File.separator+"producao.json");
         }
         
         private String downloadProductionFile() throws MalformedURLException, IOException

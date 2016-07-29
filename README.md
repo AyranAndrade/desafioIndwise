@@ -1,10 +1,22 @@
 # desafioIndwise
 Desafio para vaga de estágio da indWise
 
-Há um arquivo chamado producao.json que contém o histórico de produção de uma máquina durante uma semana. Ao executar este aplicativo, este arquivo é baixado, analisado, e um gráfico da produção por dia é exibido.
+** Descrição ** 
 
-Solução
+Há um arquivo chamado producao.json que contém o histórico de produção de uma máquina durante uma semana. Este arquivo é usado como o repositório dos dados, e não um banco de dados, como seria o costume.
 
-Após baixar o projeto, compile todos os arquivos .java que estão contidos na pasta src usando a ferramenra javac que é incluída ao se instalar a JDK.
+A linguagem usada foi o Java, por preferência minha mesmo, assim como o Spring um framework MVC.
 
-Depois, é só executar o arquivo DesafioIndwiseSolucaoApplication.
+Na view, o Bootstrap foi usado também por pura preferência minha.
+
+Os gráficos foram gerados a partir de um plugin javascript chamado [HighCharts](http://www.highcharts.com/).
+
+O resultado pode ser visto em https://desadioindwise.herokuapp.com
+
+** Instalação **
+
+Caso queira baixar o projeto e executar localmente, basta compilar todos os arquivos .java que estão contidos na pasta src e depois executar o arquivo DesafioIndwiseSolucaoApplication.class
+
+** Contato **
+
+O meu email é ayranandrade@hotmail.com

@@ -72,7 +72,6 @@
                                             
                                             <table id="table" class="highchart" data-graph-container-before="1"
                data-graph-type="column">
-            <caption>How many products have been manufactured by day?</caption>
             <thead>
                 <tr>
                     <th>Date</th>
@@ -98,17 +97,32 @@
   </section>
       
     <!-- js placed at the end of the document so the pages load faster -->
-    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     
-    <script src="//code.highcharts.com/highcharts.js"></script>
-    
-    <script src="//code.highcharttable.org/2.0.0/jquery.highchartTable-min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
     
     <script>
-        $(document).ready(function() {
-            $('table.highchart').highchartTable();
-            $('#table').hide();
-        });
+        $(function () {
+    $('table.highchart').highcharts({
+        data: {
+            table: 'table'
+        },
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'How many products have been manufactured by day?'
+        },
+        yAxis: {
+            allowDecimals: false,
+            title: {
+                text: 'Units'
+            }
+        }
+    });
+});
     </script>
 
   </body>
